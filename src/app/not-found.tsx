@@ -8,7 +8,7 @@ export default function NotFound() {
           404!
         </h1>
         <p className="max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-          Página não encontrada
+          Page not found
         </p>
       </div>
 
@@ -16,7 +16,7 @@ export default function NotFound() {
         href="/"
         className="px-6 py-3 text-white bg-blue-500 rounded-md hover:bg-blue-600"
       >
-        Voltar para a página inicial
+        Back to home page
       </Link>
     </div>
   );

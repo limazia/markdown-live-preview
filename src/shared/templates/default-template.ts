@@ -39,7 +39,7 @@ _You **can** combine them_
 
 ## Links
 
-You may be using [Markdown Live Preview](https://markdownlivepreview.com/).
+You may be using [Markdown Live Preview](https://markdownlivepreview.vercel.app/).
 
 ## Blockquotes
 
@@ -64,4 +64,4 @@ ${"`"}${"`"}${"`"}
 
 ## Inline code
 
-This web site is using ${"`"}markedjs/marked${"`"}.`;
+This web site is using ${"`"}react-markdown${"`"}.`;

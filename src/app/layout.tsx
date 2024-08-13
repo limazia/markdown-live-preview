@@ -13,12 +13,10 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.ico",
   },
-  /*
   openGraph: {
-    title: "Acacio de Lima (@limazia)",
-    description: "Desenvolvedor FullStack / Brasil / limadeacacio@gmail.com",
-    url: "https://limazia.dev",
-    images: ["https://www.limazia.dev/images/og.jpg"],
+    title: "Markdown Live Preview",
+    description: "This is the online markdown editor with live preview.",
+    url: "https://markdownlivepreview.vercel.app/",
     type: "website",
     locale: "pt_BR",
   },
@@ -26,7 +24,6 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
-  */
 };
 
 export default function RootLayout({
@@ -35,7 +32,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR" className={inter.variable} suppressHydrationWarning>
+    <html lang="en" className={inter.variable} suppressHydrationWarning>
       <body className="antialiased">
         <ClientOnly>{children}</ClientOnly>
       </body>
