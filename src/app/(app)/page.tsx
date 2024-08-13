@@ -9,7 +9,7 @@ export default function Home() {
     <>
       <Header />
 
-      <div className="flex-grow overflow-hidden w-full my-0 mx-auto bg-white dark:bg-slate-700 border flex">
+      <div className="w-full flex-grow overflow-hidden my-0 mx-auto bg-white dark:bg-slate-700 border flex">
         <div className="overflow-y-scroll basis-2/4 p-0 m-0 whitespace-nowrap align-top border-red-500">
           <Editor />
         </div>

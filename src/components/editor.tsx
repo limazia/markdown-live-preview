@@ -8,22 +8,26 @@ import "ace-builds/src-noconflict/ext-language_tools";
 
 import { cn } from "@/shared/utils/cn";
 import { Editor as EditorProps } from "@/shared/types/editor";
+import { useEditorStore } from "@/shared/stores/EditorStore";
 
-import { defaultTemplate } from "./default-template";
+export function Editor({ className }: EditorProps) {
+  const [data, setData] = useEditorStore((state) => [
+    state.data,
+    state.setData,
+  ]);
 
-export function Editor({ className } : EditorProps) {
-  function onChange(newValue: any) {
-    console.log("change", newValue);
+  function onChange(newValue: string) {
+    setData(newValue); 
   }
 
   return (
     <AceEditor
-    className={cn("w-full", className)}
+      className={cn("w-full", className)}
       mode="markdown"
       theme="chrome"
       name="editor"
       onChange={onChange}
-      value={defaultTemplate}
+      value={data} 
       fontSize={14}
       lineHeight={19}
       showPrintMargin={true}

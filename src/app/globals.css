@@ -26,7 +26,7 @@
     --input: 214.3 31.8% 91.4%;
     --ring: 222.2 84% 4.9%;
 
-    --radius: 0.5rem;  
+    --radius: 0.5rem;
   }
 
   .dark {
@@ -60,20 +60,8 @@
     @apply border-border;
   }
 
-  html {
-    @apply overflow-y-scroll;
-  }
-
   body {
-    @apply bg-background text-foreground;
-  }
-
-  a {
-    @apply text-blue-600 no-underline bg-transparent transition duration-500 ease-linear;
-  }
-
-  a:hover {
-    @apply text-blue-500;
+    @apply flex flex-col h-screen bg-background text-foreground;
   }
 
   ::-webkit-scrollbar {
