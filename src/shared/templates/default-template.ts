@@ -1,4 +1,5 @@
-export const defaultTemplate = `# Markdown syntax guide
+export const defaultTemplate = `
+# Markdown syntax guide
 
 ## Headers
 
@@ -35,7 +36,7 @@ _You **can** combine them_
 
 ## Images
 
-![This is an alt text.](/image/sample.webp "This is a sample image.")
+![This is an alt text.](/sample.png "This is a sample image.")
 
 ## Links
 

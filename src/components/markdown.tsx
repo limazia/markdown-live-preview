@@ -1,21 +1,20 @@
 "use client";
 
-import MarkdownComponent from "marked-react";
-import Lowlight from "react-lowlight";
-import javascript from "highlight.js/lib/languages/javascript";
+import MarkdownComponent from "react-markdown";
+import rehypeHighlight from "rehype-highlight";
 
 import { useEditorStore } from "@/shared/stores/EditorStore";
+import { Markdown as MarkdownProps } from "@/shared/types/markdown";
+import { cn } from "@/shared/utils/cn";
 
-Lowlight.registerLanguage("js", javascript);
+export function Markdown({ className }: MarkdownProps) {
+  const markdown = useEditorStore((state) => state.markdown);
 
-export function Markdown() {
-  const data = useEditorStore((state) => state.data);
-
-  const renderer = {
-    code(snippet, lang) {
-      return <Lowlight key="sadas" language={lang} value={snippet} />;
-    },
-  };
-
-  return <MarkdownComponent value={data} renderer={renderer} />;
+  return (
+    <div className={cn("w-full", className)}>
+      <MarkdownComponent rehypePlugins={[rehypeHighlight]}>
+        {markdown}
+      </MarkdownComponent>
+    </div>
+  );
 }

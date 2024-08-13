@@ -11,23 +11,23 @@ import { Editor as EditorProps } from "@/shared/types/editor";
 import { useEditorStore } from "@/shared/stores/EditorStore";
 
 export function Editor({ className }: EditorProps) {
-  const [data, setData] = useEditorStore((state) => [
-    state.data,
-    state.setData,
+  const [markdown, setMarkdown] = useEditorStore((state) => [
+    state.markdown,
+    state.setMarkdown,
   ]);
 
   function onChange(newValue: string) {
-    setData(newValue); 
+    setMarkdown(newValue); 
   }
 
   return (
     <AceEditor
-      className={cn("w-full", className)}
+      className={cn("!w-full !h-full", className)}
       mode="markdown"
       theme="chrome"
       name="editor"
       onChange={onChange}
-      value={data} 
+      value={markdown} 
       fontSize={14}
       lineHeight={19}
       showPrintMargin={true}

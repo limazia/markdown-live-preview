@@ -54,10 +54,13 @@
   }
 }
 
-
 @layer base {
   * {
     @apply border-border;
+  }
+
+  html {
+    @apply overflow-hidden;
   }
 
   body {
