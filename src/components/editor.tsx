@@ -17,7 +17,7 @@ export function Editor({ className }: EditorProps) {
   ]);
 
   function onChange(newValue: string) {
-    setMarkdown(newValue); 
+    setMarkdown(newValue);
   }
 
   return (
@@ -27,19 +27,23 @@ export function Editor({ className }: EditorProps) {
       theme="chrome"
       name="editor"
       onChange={onChange}
-      value={markdown} 
+      value={markdown}
       fontSize={14}
       lineHeight={19}
-      showPrintMargin={true}
+      showPrintMargin={false}
       showGutter={true}
       highlightActiveLine={true}
+      wrapEnabled={true}
       setOptions={{
+        autoScrollEditorIntoView: true,
+        indentedSoftWrap: false,
         enableBasicAutocompletion: false,
         enableLiveAutocompletion: false,
         enableSnippets: false,
         showLineNumbers: true,
         tabSize: 2,
       }}
+      editorProps={{ $blockScrolling: true }}
     />
   );
 }

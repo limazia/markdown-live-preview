@@ -1,5 +1,4 @@
-export const defaultTemplate = `
-# Markdown syntax guide
+export const defaultTemplate = `# Markdown syntax guide
 
 ## Headers
 
@@ -65,5 +64,4 @@ ${"`"}${"`"}${"`"}
 
 ## Inline code
 
-This web site is using ${"`"}markedjs/marked${"`"}.
-`;
+This web site is using ${"`"}markedjs/marked${"`"}.`;
