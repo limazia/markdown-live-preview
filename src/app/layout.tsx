@@ -1,5 +1,5 @@
 import "./globals.css";
-import "./markdown.css";
+import "github-markdown-css/github-markdown-light.css";
 
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
