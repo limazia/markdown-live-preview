@@ -4,11 +4,9 @@ import MarkdownComponent from "react-markdown";
 import rehypeHighlight from "rehype-highlight";
 import remarkGfm from "remark-gfm";
 
-import "github-markdown-css/github-markdown-light.css";
- 
 import { useEditorStore } from "@/shared/stores/EditorStore";
-import { Markdown as MarkdownProps } from "@/shared/types/markdown";
 import { cn } from "@/shared/utils/cn";
+import { Markdown as MarkdownProps } from "@/shared/types/markdown";
 
 export function Markdown({ className }: MarkdownProps) {
   const markdown = useEditorStore((state) => state.markdown);
