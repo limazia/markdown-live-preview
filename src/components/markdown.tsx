@@ -4,8 +4,8 @@ import MarkdownComponent from "react-markdown";
 import rehypeHighlight from "rehype-highlight";
 import remarkGfm from "remark-gfm";
 
-import { useEditorStore } from "@/shared/stores/EditorStore";
 import { cn } from "@/shared/utils/cn";
+import { useEditorStore } from "@/shared/stores/EditorStore";
 import { Markdown as MarkdownProps } from "@/shared/types/markdown";
 
 export function Markdown({ className }: MarkdownProps) {

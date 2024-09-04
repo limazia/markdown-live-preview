@@ -19,7 +19,6 @@ export const metadata: Metadata = {
     description: "This is the online markdown editor with live preview.",
     url: "https://markdownlivepreview.vercel.app/",
     type: "website",
-    locale: "pt_BR",
   },
   robots: {
     index: true,
